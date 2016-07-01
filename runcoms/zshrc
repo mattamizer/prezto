@@ -15,7 +15,8 @@ export PATH="/Users/matthew.morrissey/.rvm/gems/ruby-2.1.5/bin:/Users/matthew.mo
 export GOPATH=$HOME/gocode
 export PATH=$PATH:$GOPATH/bin
 
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 branch() { git checkout ${1:-$(git branch | grep -v "^* "| pick)} ;}
 code() { cd ~/Code; cd ${1:-$(ls -at ~/code | pick)} ;}
