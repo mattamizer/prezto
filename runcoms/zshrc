@@ -10,6 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Use VI keybinds, but keep ^r for backwards search
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
+
 # Customize to your needs...
 export PATH="/Users/matthew.morrissey/.rvm/gems/ruby-2.1.5/bin:/Users/matthew.morrissey/.rvm/gems/ruby-2.1.5@global/bin:/Users/matthew.morrissey/.rvm/rubies/ruby-2.1.5/bin:/usr/local/bin:.git/safe/../../bin:/Users/matthew.morrissey/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/matthew.morrissey/.rvm/bin"
 export GOPATH=$HOME/gocode
