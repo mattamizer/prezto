@@ -40,3 +40,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 export FORECAST_IO_API_KEY=66ded09ab1738e0768817c6553eeaa4f
 export SYAPSE_TEST_USER=mattm@syapse.com
 export SYAPSE_TEST_TOKEN=5761e4e3b6f67bfaf33bea1d0f96bad9a16dc244
+eval $(keychain --eval --agents gpg,ssh id_rsa 0xB940B2D47B837909)
