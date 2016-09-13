@@ -34,3 +34,11 @@ gocode() {
 }
 
 export FORECAST_IO_API_KEY=66ded09ab1738e0768817c6553eeaa4f
+export DFHOME=$HOME/code/dramafever
+source $DFHOME/docker.sh
+
+function ecr_login() {
+  REGISTRY_URL=$(dig +short registry.drama9.com CNAME|sed -e 's/.$//g')
+  REGISTRY_REGION=$(echo ${REGISTRY_URL}|awk -F. '{print $4}')
+  eval "$(AWS_PROFILE=prod ${HOME}/.virtualenv/dramafever/bin/aws ecr get-login --region ${REGISTRY_REGION}) > /dev/null 2>&1"
+}
