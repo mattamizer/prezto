@@ -34,3 +34,6 @@ gocode() {
 }
 
 export FORECAST_IO_API_KEY=66ded09ab1738e0768817c6553eeaa4f
+export HOMEBREW_GITHUB_API_TOKEN=c691fed23568a1de41ac686b7ddaaeb0bb3c318a
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
