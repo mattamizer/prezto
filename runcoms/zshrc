@@ -15,7 +15,7 @@ bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
 
 # Customize to your needs...
-export PATH="/usr/local/bin:.git/safe/../../bin:/Users/matthew.morrissey/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/matthew.morrissey/.rvm/bin"
+export PATH="/usr/local/bin:.git/safe/../../bin:/Users/mmorri929/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/mmorri929/.local/bin:/opt/X11/bin:/Users/matthew.morrissey/.rvm/bin"
 export GOPATH=$HOME/gocode
 export PATH=$PATH:$GOPATH/bin:$GOPATH/src
 
@@ -33,6 +33,17 @@ gocode() {
   )}
 }
 
-export FORECAST_IO_API_KEY=66ded09ab1738e0768817c6553eeaa4f
+eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/usr/local/opt/mysql-client@5.7/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export VAULT_ADDR=https://or.vault.comcast.com
